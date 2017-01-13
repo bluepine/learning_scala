@@ -1,11 +1,15 @@
 /**
   * Created by swei on 1/12/17.
   */
+
 import akka.actor._
 
 case object PingMessage
+
 case object PongMessage
+
 case object StartMessage
+
 case object StopMessage
 
 /**
@@ -19,7 +23,12 @@ case object StopMessage
   */
 class Ping(pong: ActorRef) extends Actor {
   var count = 0
-  def incrementAndPrint { count += 1; println("ping") }
+
+  def incrementAndPrint {
+    count += 1;
+    println("ping")
+  }
+
   def receive = {
     case StartMessage =>
       incrementAndPrint
