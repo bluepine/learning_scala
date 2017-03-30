@@ -25,7 +25,7 @@ class Ping(pong: ActorRef) extends Actor {
   var count = 0
 
   def incrementAndPrint {
-    count += 1;
+    count += 1
     println("ping")
   }
 
